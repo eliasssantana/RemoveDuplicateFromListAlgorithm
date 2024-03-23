@@ -29,6 +29,5 @@ public class ListUtilsTest {
         String expectedResult = "[a, b, c, d]";
 
         assertEquals(expectedResult, result.toString());
-
     }
 }
