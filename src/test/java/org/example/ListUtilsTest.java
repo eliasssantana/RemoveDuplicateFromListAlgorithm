@@ -2,6 +2,7 @@ package org.example;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -29,5 +30,27 @@ public class ListUtilsTest {
         String expectedResult = "[a, b, c, d]";
 
         assertEquals(expectedResult, result.toString());
+    }
+
+    @Test
+    public void givenIntegersThenRemovedDuplicates(){
+
+        List<Integer> input = new ArrayList<>();
+
+        input.add(3);
+        input.add(3);
+        input.add(4);
+        input.add(1);
+        input.add(7);
+        input.add(1);
+        input.add(2);
+        input.add(1);
+
+        List<Integer> result = ListUtils.removeDuplicatesAndOrder(input);
+
+        String expectedResult = "[1, 2, 3, 4, 7]";
+
+        assertEquals(expectedResult, result.toString());
+
     }
 }
